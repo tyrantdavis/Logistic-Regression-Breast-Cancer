@@ -1,6 +1,6 @@
 # Building a Logistic Regression
 ## Introduction
-The goal of this project is to to forecast the nature of tumors, categorizing them as benign (0) or malignant (1) by analyzing various cellular characteristics, including radius, texture, and smoothness. Similar to many datasets encountered in practical applications, the distribution of outcomes is imbalanced, with benign diagnoses occurring more frequently than malignant ones. Additionally, there exists a significant bias regarding the significance of these outcomes, as accurately identifying all malignant cases is critically important. 
+The goal of this project is to to forecast the nature of tumors, categorizing them as **benign (0)** or **malignant (1)** by analyzing various cellular characteristics, including radius, texture, and smoothness. Similar to many datasets encountered in practical applications, the distribution of outcomes is imbalanced, with benign diagnoses occurring more frequently than malignant ones. Additionally, there exists a significant bias regarding the significance of these outcomes, as accurately identifying all malignant cases is critically important. 
 
 This examination will allow classifying patients as having or not having cancer.
 
@@ -8,7 +8,8 @@ This project will scope, analyze, prepare, plot data, and seek to explain the fi
 
 Here are a couple of questions that this project seeks to answer:
 
-- What feature contributes most to the diagnosis of cancer?      
+- What was the strongest indicator of cancer diagnosis? 
+- How many patients were deemed to have cancer?      
 - What factor contributes least to the diagnosis of least cancer? 
 
 
@@ -27,12 +28,14 @@ The objective is to forecast breast cancer and educate students about the variou
 
 Several questions will be asked:
 
-- What feature contributes most to the diagnosis of breast cancer?      
+- What was the strongest indicator of cancer diagnosis?
+- How many patients were deemed to have cancer?
+- What was the strongest correlation to radius_mean?
 - What factor contributes least to the diagnosis of breast cancer? 
 
 
 
-#### Why use a logistc regression algorithm to predict the outcome?
+#### Why use a logistic regression algorithm to predict the outcome?
 Logistic regression proves to be highly effective in classifying data, which aligns well with the objectives of this project. A data example is something, and simultaneously is not something else. This form of regression produces an output that represents a classification probability ranging from 0 to 1. Logistic regression is therefore appropriate for addressing classification issues in situations where traditional linear regression is inadequate.
 
 
@@ -42,7 +45,19 @@ An anonymized dataset that can be used to train the machine-learning model has b
 
 ## Conclusions
 
-TBD...
-
-- What feature contributes most to the diagnosis of breast cancer?      
-- What factor contributes least to the diagnosis of breast cancer? 
+- What was the strongest indicator of cancer diagnosis?
+    - **concave_points_worst**
+- What were the subsequent two strongest indicators of cancer diagnosis, ranked by their level of impact?
+    - **perimeter_mean, radius_mean**
+- What was the strongest correlation to radius_mean?
+    - **area_mean**
+- What factor contributes least to the diagnosis of breast cancer?
+    - **fractal_dimension_mean**
+- What was the most effective logistic regression model for diagnosing cancer.
+    - **stratified sampling model**
+- Which confusion matrix threshold was most accurate
+    -**Threshold**: 75% 
+    - How many patients did it accurately predict?
+    - **Patients Predicted**: 163 
+    - How many patients were deemed to have cancer?
+        - **Diagnosed Cancer**: 55
