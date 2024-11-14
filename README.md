@@ -1,4 +1,12 @@
-# Building a Logistic Regression
+# Building a Logistic Regression - KNN
+
+#### Additionally
+- _Optimize the Logistic Regression model with GridSearch_
+
+- _Implement a K-Nearest Neighbor_ model
+
+---
+
 ## Introduction
 The goal of this project is to to forecast the nature of tumors, categorizing them as **benign (0)** or **malignant (1)** by analyzing various cellular characteristics, including radius, texture, and smoothness. Similar to many datasets encountered in practical applications, the distribution of outcomes is imbalanced, with benign diagnoses occurring more frequently than malignant ones. Additionally, there exists a significant bias regarding the significance of these outcomes, as accurately identifying all malignant cases is critically important. 
 
@@ -10,7 +18,8 @@ Here are a couple of questions that this project seeks to answer:
 
 - What was the strongest indicator of cancer diagnosis? 
 - How many patients were deemed to have cancer?      
-- What factor contributes least to the diagnosis of least cancer? 
+- What factor contributes least to the diagnosis of least cancer?
+- Which model performs the best and why it performs the best? 
 
 
 
@@ -36,7 +45,7 @@ Several questions will be asked:
 
 
 #### Why use a logistic regression algorithm to predict the outcome?
-Logistic regression proves to be highly effective in classifying data, which aligns well with the objectives of this project. A data example is something, and simultaneously is not something else. This form of regression produces an output that represents a classification probability ranging from 0 to 1. Logistic regression is therefore appropriate for addressing classification issues in situations where traditional linear regression is inadequate.
+Logistic regression proves to be highly effective in classifying data, which aligns well with the objectives of this project. A data example is something, and simultaneously is not something else. This form of regression produces an output that represents a classification probability ranging from 0 to 1. Logistic regression is therefore appropriate for addressing classification issues in situations where traditional linear regression is inadequate. This project will also optimize the logistic regression using GridSearch and implement K Nearest Neighbor.
 
 
 ## Data
@@ -61,3 +70,7 @@ An anonymized dataset that can be used to train the machine-learning model has b
     - **Patients Predicted**: 163 
     - How many patients were deemed to have cancer?
         - **Diagnosed Cancer**: 55
+- Which model performs the best and why it performs the best?
+  - The **KNN classification model consistently underperformed** compared to the logistic regression model **across all evaluated metrics**.
+  - The **k-nearest neighbor model achieved a score of 92%**, which is slightly **inferior to the performance of the logistic regression model at 94%**; therefore, the logistic regression model will be prioritized for further evaluation and tuning.
+  - The performance of **optimized model is inferior** to that of non-optimized logistic regression model. There is a **decline in True Positives** and a **rise in False Negatives**. This outcome is certainly counterproductive, despite the small numerical difference, as the objective is to minimize the misclassification of malignant cells as benign.
