@@ -1,5 +1,7 @@
 # Building a Logistic Regression - KNN
 
+## [Demo](https://nbviewer.org/github/tyrantdavis/Logistic-Regression-Breast-Cancer/blob/main/Logistic-Regression-Breast-Cancer.ipynb)
+
 #### Additionally
 - _Optimize the Logistic Regression model with GridSearch_
 
